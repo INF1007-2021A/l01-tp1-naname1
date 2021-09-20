@@ -2,10 +2,14 @@ import math
 
 
 def calculerPosition(positionInitiale, vitesseInitiale, duree, vitesseFinale):
+    if duree <= 0:
+        print("La durée doit être strictement positive.")
+        return None
     # TODO faites les calculs intermediaires, vous pouvez initialiser des variables locales.
+    acceleration = (vitesseFinale-vitesseInitiale)/duree
 
     # TODO calculer la position finale, assigner la valeur à la variable "positionFinale"
-    positionFinale =
+    positionFinale = vitesseInitiale*duree+1/2*acceleration*(duree)**2+positionInitiale
 
     return positionFinale
 
