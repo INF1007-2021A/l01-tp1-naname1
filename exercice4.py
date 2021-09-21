@@ -5,6 +5,10 @@ def calculerPosition(positionInitiale, vitesseInitiale, duree, vitesseFinale):
     if duree <= 0:
         print("La durée doit être strictement positive.")
         return None
+
+    #Conversion en m/s
+    vitesseFinale *= 3600/1000
+    vitesseInitiale *= 3600/1000
     # TODO faites les calculs intermediaires, vous pouvez initialiser des variables locales.
     acceleration = (vitesseFinale-vitesseInitiale)/duree
 
